@@ -61,15 +61,26 @@
 #   def total(price, type) do
 #     (1 + percent(type)) * price
 #   end
-#   defp percent(type) do  # private function
-#     cond do
-#       type == :iva_less -> 0.10
-#       type == :iva -> 0.16
-#       type == :iva_plus -> 0.26
-#     end
-#   end
+  # cond
+  # defp percent(type) do  # private function
+  #   cond do
+  #     type == :iva_less -> 0.10
+  #     type == :iva -> 0.16
+  #     type == :iva_plus -> 0.26
+  #   end
+  # end
+  # pattern matching
+  # defp percent(:iva_less) do
+  #   0.10
+  # end
+  # defp percent(:iva) do
+  #   0.16
+  # end
+  # defp percent(:iva_plus) do
+  #   0.26
+  # end
 # end
-# IO.puts Taxes.total(8_999, :iva)
+# IO.puts Taxes.total(1_999, :iva)
 # IO.puts Taxes.percent(:iva) # UndefineFunctionError
 
 # # Import public functions

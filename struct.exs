@@ -1,9 +1,7 @@
+# go to iex (profile = %Struct{})
+# puedes poner valores por defecto en los keys
+# Se utilizan mucho en Ecto
+
 defmodule Struct do
-
   defstruct [name: "", last_name: ""]
-
-  def grettings(user = %Struct{}) do
-    IO.puts "Mi name is #{user.name}" 
-  end
-  
 end
