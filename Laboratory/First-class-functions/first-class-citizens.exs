@@ -17,12 +17,12 @@ defmodule FirstClassCityzens do
   end
 end
 
-# Asign a function to a value
+# Asign a function to a variable
 func = FirstClassCityzens
-IO.puts func
+# IO.puts func
+
 # function = FirstClassCityzens.square(9)
-# IO.puts(function)
+# IO.puts "Result #{function}"
 
 # Functions like other data-type 
-
 # TODO: put the func in a list and execute func <14-08-21, ricardoveronica> #

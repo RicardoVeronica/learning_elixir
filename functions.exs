@@ -1,13 +1,16 @@
-# # Modules an functions
+# Modules an functions
 # defmodule Calculator do
-#   # def sum(a, b) do
-#   #   a + b
-#   # end
-#   def sum(a, b), do: a + b  # on-liner function
+#   def sum(a, b) do
+#     IO.puts "This is the answer:"
+#     a + b
+#   end
+#   # def sum(a, b), do: a + b  # on-liner function or keyword list
 # end
-# # Store your function in a variable
-# addition = Calculator.sum(1, 1)
-# IO.puts addition
+
+# Store your function in a variable
+# addition = Calculator.sum
+# IO.puts addition(1, 1)
+
 
 # # Pipe operator
 # IO.puts(Integer.to_string(abs(-100)))
@@ -17,28 +20,32 @@
 # |> Integer.to_string
 # |> IO.puts
 
-# # function with guards
-# defmodule Calc do
-#   def div(_a, b) when b === 0 do
-#     IO.puts("You can not divide by 0")
-#     :error
-#   end 
-#   def div(a, b) do
-#     a / b
-#   end
-# end 
-# IO.puts(Calc.div(10, 0))
+
+# function with guards
+defmodule Calc do
+  def div(_a, b) when b === 0 do
+    IO.puts("You can not divide by 0")
+    :error
+  end 
+  def div(a, b) do
+    a / b
+  end
+end 
+IO.puts(Calc.div(10, 0))
 # IO.puts(Calc.div(10, 5))
+
 
 # # Anonimous functions
 # double = fn x -> x * x end
 # result = double.(3)
 # IO.puts result
 
+
 # # Anonimous function shorthand
 # double = &(&1 * &1)
 # result = double.(3)
 # IO.puts result
+
 
 # # Anonimous function like callback
 # defmodule Calc do
@@ -48,6 +55,7 @@
 # end
 # IO.puts Calc.operate(fn a, b -> a + b end)
 
+
 # # Capturing functions
 # defmodule Calc do
 #   def operate(function) do
@@ -55,6 +63,7 @@
 #   end 
 # end
 # IO.puts Calc.operate(&rem/2)  # return 0, 1
+
 
 # # Private functions
 # defmodule Taxes do
@@ -83,6 +92,7 @@
 # IO.puts Taxes.total(1_999, :iva)
 # IO.puts Taxes.percent(:iva) # UndefineFunctionError
 
+
 # # Import public functions
 # defmodule Import do
 #   import IO  # importing IO module
@@ -91,6 +101,7 @@
 #   end
 # end
 # Import.print("hello world importing IO")
+
 
 # # Aliases for public functions
 # defmodule Alias do

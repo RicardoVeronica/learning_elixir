@@ -7,6 +7,10 @@
 #   IO.puts "Menor de edad"
 # end
 
+# ternario
+# output = if age >= 18, do: "Welcome", else: "Go away"
+# IO.puts output
+
 
 # unless lo contrario de if
 # admin = true
@@ -25,7 +29,7 @@
 
 
 # cond para multiples if
-# lluvia = 100
+# lluvia = 0 
 
 # message = cond do
 #   lluvia == 0 -> "No ha llovido"
@@ -38,14 +42,15 @@
 # IO.puts message
 
 
-# case para pattern matching
-# exp = {:true, "hello"}
+# case para pattern matching y condicionales
+# exp = {:ok, 0}
 
-# stdo = case exp do
-#   {:ok, x} when is_number(x) -> "Is OK with the number #{x}"
-#   {:ok, x} -> "Is OK with #{x}"
+# output = case exp do
+#   # x is pattern matching variable
+#   {:ok, x} when is_number(x) -> "OK with #{x} number"
+#   {:ok, x} -> "OK with #{x} string"
 #   {:error, _} -> "Error"
 #   _ -> "Anything else"
 # end
 
-# IO.puts stdo
+# IO.puts output
