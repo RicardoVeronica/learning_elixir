@@ -1,5 +1,3 @@
-# Pattern matching
-
 # Destructuring, Data structure
 {first, last} = {"Ricardo", "Veronica"}
 
